@@ -1,0 +1,7 @@
+parameters:
+#    jb_planned.example.class: JB\PlannedBundle\Example
+
+services:
+#    jb_planned.example:
+#        class: %jb_planned.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,7 @@
+planned-index:
+    path: /index
+    defaults: { _controller: JBPlannedBundle:Planned:index }
+
+planned-tweets-list:
+    path: /planned-tweets
+    defaults: { _controller: JBPlannedBundle:Planned:plannedList }

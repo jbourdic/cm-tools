@@ -1,0 +1,4 @@
+jb_planned:
+    resource: "@JBPlannedBundle/Resources/config/routing.yml"
+    prefix:   /
+
