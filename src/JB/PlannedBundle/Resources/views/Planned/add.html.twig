@@ -1,0 +1,9 @@
+{% extends "JBPlannedBundle::layout.html.twig" %}
+
+{% block title %}{{ parent() }} - Ajouter un tweet{% endblock %}
+
+{% block content %}
+    <h2>Ajouter un tweet plannifié</h2>
+    {{ form(form) }}
+
+{% endblock %}

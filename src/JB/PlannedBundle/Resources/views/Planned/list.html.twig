@@ -3,8 +3,13 @@
 {% block title %}{{ parent() }} - Index{% endblock %}
 
 {% block content %}
-    Vous êtes bien sur la plateforme de tweets. Voici votre liste :
 
-
-
+    <h2>Vous êtes bien sur la plateforme de tweets. Voici votre liste :</h2>
+    <ul>
+        {% for planned in plannedTweets %}
+            <li>{{ planned.message }}</li>
+        {% else %}
+            <li>Pas de tweet trouvé.</li>
+        {% endfor %}
+    </ul>
 {% endblock %}

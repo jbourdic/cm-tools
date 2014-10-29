@@ -11,7 +11,7 @@ namespace JB\PlannedBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="JB\PlannedBundle\Entity\PlannedTweetsRepository")
  * @ORM\Table(name="planned_tweets")
  */
 class PlannedTweets {
@@ -34,42 +34,42 @@ class PlannedTweets {
     protected $message;
 
     /**
-     * @ORM\Column(type="blob")
+     * @ORM\Column(type="blob", nullable=true)
      */
     protected $image;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     protected $imageType;
 
     /**
-     * @ORM\Column(type="int")
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $imageLength;
 
     /**
-     * @ORM\Column(type="int")
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $imageWidth;
 
     /**
-     * @ORM\Column(type="int")
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $imageHeight;
 
      /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", nullable=true)
      */
     protected $receiver;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(type="datetime", nullable=true)
      */
     protected $sendingDate;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", nullable=true)
      */
     protected $status;
 
@@ -183,7 +183,7 @@ class PlannedTweets {
     /**
      * Set imageLength
      *
-     * @param \int $imageLength
+     * @param \integer $imageLength
      * @return PlannedTweets
      */
     public function setImageLength(\int $imageLength)
@@ -196,7 +196,7 @@ class PlannedTweets {
     /**
      * Get imageLength
      *
-     * @return \int 
+     * @return \integer
      */
     public function getImageLength()
     {
@@ -206,7 +206,7 @@ class PlannedTweets {
     /**
      * Set imageWidth
      *
-     * @param \int $imageWidth
+     * @param \integer $imageWidth
      * @return PlannedTweets
      */
     public function setImageWidth(\int $imageWidth)
@@ -219,7 +219,7 @@ class PlannedTweets {
     /**
      * Get imageWidth
      *
-     * @return \int 
+     * @return \integer
      */
     public function getImageWidth()
     {
@@ -242,7 +242,7 @@ class PlannedTweets {
     /**
      * Get imageHeight
      *
-     * @return \int 
+     * @return \integer
      */
     public function getImageHeight()
     {

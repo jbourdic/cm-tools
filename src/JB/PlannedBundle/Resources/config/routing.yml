@@ -2,6 +2,26 @@ planned-index:
     path: /index
     defaults: { _controller: JBPlannedBundle:Planned:index }
 
-planned-tweets-list:
-    path: /planned-tweets
+planned-tweet-list:
+    path: /list
     defaults: { _controller: JBPlannedBundle:Planned:plannedList }
+
+planned-tweet-view:
+    path: /view
+    defaults: { _controller: JBPlannedBundle:Planned:plannedView }
+
+planned-tweet-add:
+    path: /add
+    defaults: { _controller: JBPlannedBundle:Planned:plannedAdd }
+
+planned-tweet-edit:
+    path: /edit{id}
+    defaults: { _controller: JBPlannedBundle:Planned:plannedEdit }
+    requirements:
+        id: \d+
+
+planned-tweet-delete:
+    path: /delete/{id}
+    defaults: { _controller: JBPlannedBundle:Planned:plannedDelete }
+    requirements:
+            id: \d+
