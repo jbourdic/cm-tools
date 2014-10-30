@@ -1,4 +1,19 @@
+jb_user:
+    resource: "@JBUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+login:
+    pattern:   /login
+    defaults:  { _controller: JBuserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout
+
 jb_planned:
     resource: "@JBPlannedBundle/Resources/config/routing.yml"
     prefix:   /planned-tweets
+
 
