@@ -31,6 +31,9 @@
 /phpunit.xml
 
 # Composer PHAR
-/composer.phar
-.idea/.name
-.idea/workspace.xml
+/composer.phar 
+.idea/.name 
+
+.idea/workspace.xml 
+.idea/frameworkRootSettings.xml
+.vagrant/
