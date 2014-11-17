@@ -34,3 +34,9 @@
 /composer.phar
 .idea/.name
 .idea/workspace.xml
+
+.DS_Store
+.idea/
+/web/.DS-STORE
+/src/.DS_STORE
+.idea/cm-tools.iml
