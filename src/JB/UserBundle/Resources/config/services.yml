@@ -1,0 +1,11 @@
+parameters:
+#    jb_user.example.class: JB\UserBundle\Example
+    hwi_oauth.user.provider.entity:
+        class: HWI\Bundle\OAuthBundle\Security\Core\User\OAuthUserProvider
+services:
+    jb_user.oauth_user_provider:
+        class: JB\UserBundle\Auth\OAuthProvider
+        arguments: [@session, @doctrine, @service_container]
+#    jb_user.example:
+#        class: %jb_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

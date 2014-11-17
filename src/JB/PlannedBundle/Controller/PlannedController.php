@@ -16,10 +16,11 @@ class PlannedController extends Controller
 
     public function plannedListAction()
     {
-
+        $user = $this->getUser();
+        $userId = $user->getId();
         $em = $this->getDoctrine()->getManager();
         $repository = $em->getRepository("JBPlannedBundle:PlannedTweets");
-        $plannedTweets = $repository->findByIdSender(1);
+        $plannedTweets = $repository->findByIdSender($userId);
 
         return $this->render('JBPlannedBundle:Planned:list.html.twig', array('plannedTweets' => $plannedTweets));
     }
@@ -44,7 +45,8 @@ class PlannedController extends Controller
 
         // Si la requête est en POST, c'est que le visiteur a soumis le formulaire
         if ($form->handleRequest($request)->isValid()) {
-            $plannedTweet->setIdSender(1);
+            $user = $this->getUser();
+            $plannedTweet->setIdSender($user->getId());
 
             $em = $this->getDoctrine()->getManager();
             $em->persist($plannedTweet);

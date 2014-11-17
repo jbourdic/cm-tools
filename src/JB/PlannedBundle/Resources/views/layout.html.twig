@@ -3,14 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>{% block title %}CM Tools by Julien BOURDIC{% endblock %}</title>
+
+    <link href="/web/css/bootstrap.css" rel="stylesheet" media="screen">
 </head>
 <body>
-<header>
-    <ul id="menu">
-        <li class="menu-item"><a href="/web/app_dev.php/planned-tweets/index">Home</a></li>
-        <li class="menu-item"><a href="/web/app_dev.php/planned-tweets/list"> Mes tweets</a></li>
-        <li class="menu-item"><a href="/web/app_dev.php/planned-tweets/add"> Ajouter un tweet plannifié</a></li>
-    </ul>
+<header class="page-header">
+    <nav class="navbar navbar-default" role="navigation" id="menu">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li class="menu-item" role="presentation"><a href="{{ path('planned_index') }}">Home</a></li>
+                <li class="menu-item" role="presentation"><a href="{{ path('planned_list') }}"> Mes tweets</a></li>
+                <li class="menu-item" role="presentation"><a href="{{ path('planned_add') }}"> Ajouter un tweet
+                        plannifié</a></li>
+            </ul>
+            <div class="nav navbar-nav navbar-right">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <span class="menu-item"> Connecté en tant que {{ app.user.username }} <a href="{{ path('logout') }}">Déconnexion</a></span>
+                {% else %}
+                    <a href="{{ path('login') }}">Connexion</a>
+                {% endif %}
+            </div>
+        </div>
+    </nav>
 </header>
 <div id="content">
     {% block content %}

@@ -19,7 +19,7 @@ class PlannedTweetsType extends AbstractType
             ->add('image')
             ->add('receiver')
             ->add('sendingDate','datetime')
-            ->add('Valider', 'submit')
+            ->add('valider', 'submit')
         ;
     }
     
