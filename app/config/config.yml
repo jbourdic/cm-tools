@@ -63,21 +63,3 @@ swiftmailer:
     username:  %mailer_user%
     password:  %mailer_password%
     spool:     { type: memory }
-
-hwi_oauth:
-    # name of the firewall in which this bundle is active, this setting MUST be set
-    firewall_name: main
-    resource_owners:
-            twitter:
-                type:                twitter
-                client_id:           %twitter-ck%
-                client_secret:       %twitter-sk%
-            facebook:
-                type:                facebook
-                client_id:           %facebook-ck%
-                client_secret:       %facebook-sk%
-
-braincrafted_bootstrap:
-    auto_configure:
-        assetic: false
-
